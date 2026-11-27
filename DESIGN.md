@@ -157,9 +157,9 @@ Enemy types for level one: 3 (basic, armored, fast), so loadout choices matter.
 
 ## 11. Tech and Data Model
 
-**Tech stack:** a single self-contained `index.html` (vanilla JavaScript and Canvas, no build step, no external dependencies). It opens straight from the file system, including on a phone, so testing needs no server. Touch and mouse input both work.
+**Tech stack:** the game ships as a single self-contained `index.html` (vanilla JavaScript and Canvas, no framework, no external dependencies). It opens straight from the file system, including on a phone, so testing needs no server. Touch and mouse input both work.
 
-**Data:** game data lives in plain data objects inside `index.html`, grouped and shaped exactly like the JSON files below, and separate from the game logic. Balance changes edit data, not code. Moving these objects out into real JSON files is a stretch goal, once a local server or build step is acceptable.
+**Data:** game data lives in JSON files under `data/`, separate from the game logic. Balance changes edit data, not code. `tools/build.js` (plain Node, no dependencies) inlines the JSON and the `src/` scripts into `index.html`, so the player never needs a server; the tests fail if `index.html` is out of date with its sources.
 
 - `towers`: id, name, role, energy_cost, base_damage, base_range_tiles, fire_rate, place_cost, base_max_level, support_bonus, splash, unlock (starting | artifact), sprite key
 - `enemies`: id, name, hp, speed (tiles/second), armor (flat damage reduction), bounty
@@ -197,7 +197,7 @@ Settled in v0.3:
 - Tower caps are per tower type.
 - Armor is a flat 5 damage reduction per hit; fire rate is 1 shot/second by default; enemy speed is 2 tiles/second by default; Pulse splash is 1 tile at half damage.
 - Range bonus support ("Shield Relay") is parked.
-- Tech: single `index.html`, data separated from logic; real JSON files are a stretch goal.
+- Tech: single generated `index.html`; data in `data/*.json`, bundled in by `tools/build.js`.
 
 Still open (defaults assumed until decided):
 - Replay farming: replays pay kill credits and leftover credits every time. Is unlimited grinding acceptable? *Default: yes for v0.1.*

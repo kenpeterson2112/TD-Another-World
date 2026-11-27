@@ -1,0 +1,17 @@
+[
+  {
+    "id": "blaster",
+    "name": "Blaster",
+    "role": "Single-target damage",
+    "energy_cost": 1,
+    "place_cost": 100,
+    "base_damage": 10,
+    "base_range_tiles": 2,
+    "fire_rate": 1,
+    "base_max_level": 3,
+    "support_bonus": null,
+    "splash": null,
+    "unlock": "starting",
+    "sprite": "blaster"
+  }
+]

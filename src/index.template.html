@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0e18">
+<title>TD: Another World</title>
+<!-- BUILD:NOTICE -->
+<style>
+/* BUILD:STYLE */
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="stats">
+      <div class="stat" id="stat-health"><span class="label">Base</span><span class="value">-</span></div>
+      <div class="stat" id="stat-credits"><span class="label">Credits</span><span class="value">-</span></div>
+      <div class="stat" id="stat-wave"><span class="label">Wave</span><span class="value">-</span></div>
+      <div class="stat" id="stat-energy"><span class="label">Energy</span><span class="value">-</span></div>
+    </div>
+    <div class="waves" id="waves" aria-label="Waves"></div>
+  </header>
+
+  <main id="stage">
+    <canvas id="map" aria-label="Hex map"></canvas>
+    <section class="panel" id="intel" hidden aria-live="polite"></section>
+    <div id="overlay" hidden>
+      <div class="card">
+        <h2 id="overlay-title"></h2>
+        <p id="overlay-stats"></p>
+        <p class="final" id="overlay-credits"></p>
+        <button class="primary" id="btn-restart" type="button">Restart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer id="controls">
+    <div class="control-row">
+      <div id="palette"></div>
+    </div>
+    <div class="control-row" style="margin-top: 8px">
+      <button class="primary" id="btn-start" type="button">Start wave</button>
+      <button id="btn-pause" type="button">Pause</button>
+      <button id="btn-speed" type="button" aria-label="Game speed">1x</button>
+    </div>
+    <div id="message" aria-live="polite"></div>
+  </footer>
+</div>
+
+<script>
+/* BUILD:DATA */
+</script>
+<script>
+/* BUILD:SCRIPTS */
+</script>
+</body>
+</html>
