@@ -1,0 +1,6 @@
+{
+  "starting_credits": 100,
+  "base_health": 20,
+  "energy_cap": 1,
+  "loadout": ["blaster"]
+}

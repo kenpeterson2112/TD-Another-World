@@ -1,0 +1,20 @@
+[
+  {
+    "id": "basic",
+    "name": "Crawler",
+    "hp": 10,
+    "speed": 2,
+    "armor": 0,
+    "bounty": 5,
+    "base_damage": 1
+  },
+  {
+    "id": "fast",
+    "name": "Skitter",
+    "hp": 6,
+    "speed": 3,
+    "armor": 0,
+    "bounty": 5,
+    "base_damage": 1
+  }
+]
